@@ -1,0 +1,843 @@
+html, body {
+    color: #222;
+    font-family: "Inter", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    text-decoration: none;
+    font-size: 1.1vw;
+}
+/********Оглавление********/
+.header_firstline {
+    display: flex;
+    align-items: center;
+    background: #000000;
+    box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: 0.5% 2% 0.5% 2%;
+}
+.firstline_items {
+    font-weight: 700;
+    line-height: 120.1%;
+    letter-spacing: 0.34px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: color 0.2s linear;
+    margin-right: 2%;
+}
+.firstline_items:hover {
+    color: #DC444B;
+}
+.push {
+    margin-left: auto;
+}
+.header_second_line {
+    display: flex;
+    background: #DEC565;
+    box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    align-items: center;
+    justify-content: center;
+    padding: 0.5% 2% 0.5% 2%;
+}
+.icons {
+    width: 2%;
+}
+.logo {
+    position: absolute;
+    left: 50%;
+    margin-top: 0.25%;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.logo img {
+    width: 2.3vw;
+}
+.logo:hover {
+    filter: drop-shadow(0px 0px 1.6em rgb(255, 255, 255)) brightness(1.5);
+}
+.secondline_item {
+    font-weight: 700;
+    line-height: 120.1%;
+    letter-spacing: 0.34px;
+    text-decoration: none;
+    color: #000000;
+    margin-right: 2%;
+    transition: color 0.2s linear;
+}
+.secondline_item:hover {
+    color: rgb(255, 255, 255);
+}
+/*************Кнопка Войти**************/
+.pop_up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    z-index: 4;
+    background-color: rgb(0, 0, 0, 0.8);
+    visibility: hidden;
+    transition: opacity .4s, visibility .4s;
+}
+.pop_up_container {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    align-items: center;
+    right: 0;
+    left: 0;
+}
+.pop_up_body {
+    background: linear-gradient(181deg, #FFF 0%, rgba(255, 255, 255, 0.90) 100%);
+    border-top: solid 1px rgba(255,255,255,.5);
+    border-radius: 1.5vw;
+    height: 40vw;
+    box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform 0.7s;
+}
+.pop_up.active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+.pop_up.active .pop_up_body {
+    transform: scale(1);
+}
+.nav {
+    width: 100%;
+    padding-top: 8%;
+    opacity: 1;
+    transition: all .5s ease;
+}
+.pop_up_close {
+    position: absolute;
+    right: 5%;
+    top: 2%;
+    font-size: 1.3vw;
+    color: rgb(0, 0, 0) !important;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.pop_up_close:hover {
+    color: rgb(175, 64, 64) !important;
+}
+li {
+    display: inline;
+    padding: 0 1% 0 5%;
+    font-size: 1.2vw;
+    text-align: left;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.signin-active a {
+    padding-bottom: 1%;
+    color: #000000;
+    text-decoration: none;
+    border-bottom: solid 0.15vw #DC444B;
+    transition: all .25s ease;
+}
+.signin-inactive a {
+    padding-bottom: 0;
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    border-bottom: none;
+}
+.signup-inactive a {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    transition: all .25s ease;
+}
+.signup-active a {
+    color: #000000;
+    text-decoration: none;
+    border-bottom: solid 0.15vw #DC444B;
+    padding-bottom: 1%;
+}
+/***********************************************/
+.cont {
+    display: flex;
+}
+.form-signin, .form-signup {
+    padding: 15% 5% 0 5%;
+    min-width: 100%;
+    box-sizing: border-box;
+}
+.form-signin {
+    transition: all .5s ease;
+}
+.form-signin-left {
+    transform: translate(-100%, 0px);
+    opacity: .0;
+}
+.form-signup {
+    transform: translate(10%, 0);
+    transition: all .5s ease;
+}
+.form-signup-left {
+    transform: translate(-100%, 0px);
+    opacity: 1;
+}
+/***********************************************/
+.form-signin input, .form-signup input {
+    color: #000000;
+    box-sizing: border-box;
+    font-size: 1vw;
+    width: 100%;
+}
+.pop_up-input, .input-password {
+    width: 100%;
+    padding: 2% 5%;
+    border: 0.15em solid black;
+    border-radius: 5em;
+    background: rgba(255,255,255,.2);
+}
+/**************Рофлы с переключателем***************/
+label {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1vw !important;
+    padding: 5% 0 2% 4%;
+    display: flex;
+    align-items: center;
+}
+/*******Убираем дефолтный переключатель***********/
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    display: none;
+}
+/*************************************************/
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+    position: relative;
+    padding: 0% 23%;
+    cursor: pointer;
+    margin-top: 3%;
+}
+/**************Новый переключатель***************/
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before,
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+    content: '';
+    position: absolute;
+}
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+    width: 18%; 
+    padding: 3% 0;
+    border: 1px solid rgba(135, 135, 135, 0.4);
+    background: rgba(135, 135, 135, 0.2);
+    border-radius: 5em;
+    left: 0;
+    transition: all .2s ease;
+}
+/****************Добавляем шарик*********************/
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+    width: 0.8vw;
+    height: 0.8vw;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    top: 15%; 
+    left: 2%;
+    transition: all .2s ease;
+}
+/************Анимация шарика*************/
+[type="checkbox"]:checked + label:before {
+    background: #DEC565; 
+}
+[type="checkbox"]:checked + label:after {
+    background: #ffffff;
+    top: 15%; 
+    left: 12%;
+}
+/************ДА ИЛИ НЕТ~(>_<~)*************/
+[type="checkbox"]:not(:checked) + label .remember_me:before,
+[type="checkbox"]:checked + label .remember_me:after {
+    position: absolute;
+    font-size: 1vw;
+    font-weight: 700;
+    transition: all .2s ease;
+}
+/************NO NO NO NO*************/
+[type="checkbox"]:not(:checked) + label .remember_me:before {
+    content: "нет";
+    left: 8%;
+}
+/************YES YES YES YES*************/
+[type="checkbox"]:checked + label .remember_me:after {
+    content: "да";
+    left: 4%;
+}
+/************************************************************/
+.btn-sign {
+    width: 100%;
+    float: left;
+    padding: 2%;
+    margin-top: 5%;
+    border: none;
+    border-radius: 5em;
+    background-color: #DC444B;
+
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9vw;
+    text-align: center;
+    color: #ffffff;
+}
+.btn-sign:hover {
+    cursor: pointer; 
+    background-color: #993439;
+    transition: all .2s; 
+}
+.forgot {
+    text-align: center;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    border-top: solid 1px rgba(0, 0, 0, 0.3);
+    margin-top: 35%;
+    padding: 10%;
+    text-decoration: none;
+}
+.forgot a {
+    color: #5a5a5a !important;
+    font-weight: 400;
+    font-size: 1vw;
+    text-decoration: none;
+}
+.password {
+	position: relative;
+}
+.password-control {
+	position: absolute;
+	left: 90%;
+    top: 15%;
+	width: 70%;
+	height: 70%;
+	background: url(https://snipp.ru/demo/495/view.svg) 0 0 no-repeat;
+}
+.password-control.view {
+	background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+}
+/***************Свайпер**************/
+.show-goods {
+    display: flex;
+    padding: 5%;
+}
+.container {
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 1%;
+}
+/***************Свайпер**************/
+.goods_photo {
+    display: flex;
+    grid-area: 1 / 1 / 3 / 3;
+}
+.vertikal_bar {
+    display: flex;
+    flex-direction: column;
+    margin-right: 3%;
+    width: 15%;
+    gap: 1%;
+}
+.vb_img {
+    max-height: 13%;
+    border-radius: 0.5em;
+    cursor: pointer;
+    border: 0.1em solid transparent;
+    padding: 2%;
+    border-radius: 20%;
+}
+.goods_swiper {
+    border-radius: 5%;
+    border: 1px solid rgba(150, 150, 150, 0.2);
+}
+.vb_img.clicked {
+    border: 0.1em solid black;
+}
+.swiper-slide {
+    border-radius: 2em solid;
+}
+.main_photo {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+/***************Информация о товаре**************/
+.goods_name {
+    line-height: 105%;
+    font-weight: 600;
+}
+.goods_inf-block {
+    position: relative;
+    font-weight: 600;
+}
+.nav_cont {
+    display: flex;
+    gap: 2%;
+}
+/*************Стрелки или Стрелки?**************/
+.swiper-btn-prev {
+    left: 2%;
+}
+.swiper-btn-next {
+    right: 2%;
+}
+.swiper-btn-next,
+.swiper-btn-prev{
+    transition: opacity .4s;
+}
+.swiper-button-disabled.active {
+    opacity: 0.5 !important;
+}
+.arrow {
+    position: absolute;
+    z-index: 2;
+    width: 7%;
+    height: 7%;
+    top: 45%;
+    cursor: pointer;
+    border-color: transparent;
+    border-radius: 50%;
+    background-color: #6f6f6f;
+}
+.arrow.disable {
+    opacity: 0;
+}
+.arrow.active {
+    opacity: 1;
+}
+.arrow:hover {
+    filter: brightness(1.5);
+    outline: none;
+}
+.arrow::before,
+.arrow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+.arrow::before {
+    width: 12%;
+    height: 50%;
+    background-color: #f5f0f6;
+}
+.arrow::after {
+    width: 40%;
+    height: 40%;
+    border-top: 0.30vw solid #f5f0f6;
+    border-left: 0.30vw solid #f5f0f6;
+}
+.swiper-btn-prev::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.swiper-btn-next::after {
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+/*********Кнопки выбора цвета и размера********/
+.size-color_container {
+    margin-top: 2%;
+    line-height: 105%;
+    font-weight: 520;
+}
+.choise_size-block, .choise_color-block {
+    display: block;
+    padding-bottom: 2%;
+}
+.color, .size {
+    display: flex;
+    padding-bottom: 2%;
+}
+#color_inf, #size_inf {
+    padding: 0% 1%;
+}
+.btn_size {
+    padding: 1.5% 2.5%;
+    background-color: transparent;
+    font-size: 1.2vw;
+    cursor: pointer;
+    border: 0.15em solid #bababa;
+    border-radius: 2em;
+}
+.btn_color {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0.15rem solid #bababa;
+    border-radius: 50%;
+    font-size: 0vw;
+    background-size: cover;
+    padding: 7%;
+}
+.btn_size:hover, .btn_color:hover{
+    border: 0.15rem  solid #616161;
+}
+.btn_size.clicked {
+    border: 0.15rem  solid #000000;
+}
+.btn_color.clicked {
+    border: 0.15rem  solid #000000;
+}
+/**************Кнопки навигации***************/
+.nav_button {
+    line-height: 150%;
+    font-weight: normal;
+    color: #2964c5;
+    text-decoration: none;
+    pointer-events: all;
+}
+/****************Блок покупики*****************/
+.order_block {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-size: 1.3vw;
+    grid-area: 1 / 4 / 3 / 4;
+}
+.box-order {
+    background-color: #ECEAEA;
+    border-radius: 1em;
+    padding: 3% 2.5%;
+}
+.discount {
+    display: flex;
+    align-items: center;
+}
+.discount_precent {
+    color: #DC444B;
+    font-size: 1.3vw;
+    margin-left: 2%;
+}
+.price {
+    font-size: 1.7vw;
+    font-weight: 600;
+}
+.prev_price {
+    display: inline-block;
+    line-height: 1.5;
+    opacity: .64;
+    text-decoration: line-through;
+}
+.btn_container {
+    margin-top: 2%;
+    font-size: 1.3vw;
+    display: flex;
+    gap: 2%;
+}
+.oreder_buttons {
+    padding: 4% 2%;
+    width: 100%;
+    font-size: 1.2vw;
+    cursor: pointer;
+    border-radius: 2em;
+    border: none;
+}
+/****************Доставка*****************/
+.delivery {
+    background-color: #ECEAEA;
+    border-radius: 1em;
+    padding: 3% 2.5%;
+    margin-top: 2%;
+}
+.delivery_item {
+    margin-top: 5%;
+    border-bottom: 1px solid rgb(150, 150, 150);
+    padding-bottom: 5%;
+}
+.delivery_price {
+    display: flex;
+}
+.delivery_icons {
+    width: 6%;
+    height: 2%;
+}
+.delivery_text {
+    font-size: 1vw;
+    margin: auto 2%;
+}
+.delivery_inf {
+    color: rgb(150, 150, 150);
+    margin: 0 8%;
+    font-size: 1vw;
+}
+/**************Доп инфа о товаре*****************/
+.extra_inf {
+    display: block;
+    font-size: 1.4vw;
+    width: 100%;
+    grid-area: 3 / 1 / 3 / 4;
+}
+.description_img {
+    width: 100%;
+    height: 100%;
+}
+#showButton, #hideButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 1% 0;
+    padding: 1% 0;
+    font-size: 1.1vw;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0px 0.15rem 0.15rem rgba(0, 0, 0, 0.25);
+    background-color: #e4e4e4;
+    border-radius: 5em;
+    color: #222;
+    border: none;
+    transition: background-color 0.3s;
+}
+#showButton:hover, #hideButton:hover {
+    background-color: #d9d9d9;;
+}
+.arrow_img {
+    width: 2.5%;
+}
+.characteristic_container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.characteristic_item {
+    padding-bottom: 2%;
+    color: #868686;
+}
+.item-answer {
+    font-size: 1.2vw;
+    color: black;
+}
+/*********Желтая полса с инфо-ссылками***********/
+footer {
+    background-color: #E4CA6E;
+    margin: 5% 0 2%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 20% 18% 20% 20% 20%;
+    justify-content: center;
+    padding: 0.5%;
+    column-gap: 0.5%;
+}
+.titel-of-items {
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-size: 1.3vw;
+    font-style: normal;
+    flex-flow: nowrap;
+    font-weight: 700;
+    line-height: 200%;
+    letter-spacing: 0.3px;
+}
+.item { 
+    font-size: 1.2vw;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    line-height: 200%;
+    cursor: pointer;
+}
+.last_item {
+    cursor: pointer;
+    font-family: Times New Roman;
+    font-size: 1.2vw;
+    font-weight: 400;
+    line-height: 120%;
+}
+.text-of-textblock:hover{
+    color: rgb(255, 255, 255);
+}
+.media_icons {
+    width: 12%;
+}
+.cards_icons {
+    width: 18%;
+    vertical-align: middle;
+    padding: 1%;
+}
+.line {
+    border: 1px solid;
+    flex-grow: 1;
+    margin: 0 2% 0 2%;
+}
+/*************Медиа приколы****************/
+@media (min-width: 319px) and (max-width: 639px) {
+    body {
+        font-size: 2.5vw;
+    }
+    header {
+        font-size: 2vw;
+    }
+    .header_firstline {
+        padding: 1% 2%;
+    }
+    .header_second_line {
+        padding: 1% 2%;
+    }
+    .logo img {
+        width: 4vw;
+    }
+    .secondline_item {
+        margin-right: 1%;
+    }
+    .icons {
+        width: 3%;
+    }
+    .show-goods {
+        padding: 5% 1.5%;
+    }
+    .icons {
+        width: 3%;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .vertikal_bar {
+        display: none;
+    }
+    .goods_name {
+        font-size: 3vw;
+        order: 1;
+    }
+    .goods_photo {
+        order: 2;
+    }
+    .goods_inf-block {
+        order: 3;
+        font-size: 3vw;
+    }
+    .main_photo {
+        width: 100%;
+        height: 100%;
+    }
+    .arrow::after {
+        border-top: 0.8vw solid #f5f0f6;
+        border-left: 0.8vw solid #f5f0f6;
+    }
+    .btn_size {
+        padding: 2.5% 3.5%;
+        font-size: 2.5vw;
+        border: 0.25em solid #bababa;
+        border-radius: 4em;
+    }
+    .btn_color {
+        padding: 7% 7%;
+    }
+    .btn_size:hover, .btn_color:hover{
+        border: 0.25em  solid #616161;
+    }
+    .btn_size:focus, .btn_color:focus  {
+        border: 0.25em  solid #000000;
+    }
+    .discount_precent {
+        font-size: 2.3vw;
+    }
+    .price {
+        font-size: 3vw;
+    }
+    .prev_price {
+        font-size: 2.3vw;
+    }
+    .order_block {
+        order: 4
+    }
+    .oreder_buttons {
+        font-size: 2.5vw;
+    }
+    .delivery_text {
+        font-size: 2.5vw;
+    }
+    .delivery_inf {
+        font-size: 2vw;
+    }
+    .extra_inf {
+        order: 5;
+        font-size: 3vw;
+    }
+    #showButton, #hideButton{
+        font-size: 2.5vw;
+    }
+    .item-answer {
+        font-size: 2.3vw;
+    }
+    .titel-of-items {
+        font-size: 1.5vw;
+    }
+    .item {
+        font-size: 1.7vw;
+    }
+    .titel-of-items {
+        font-size: 1.8vw;
+    }
+    .line {
+        display: none;
+    }
+    .media_icons {
+        width: 20%;
+    }
+    .cards_icons {
+        width: 25%;
+    }
+    .pop_up_container {
+        width: 55%;
+    }
+    .pop_up_body {
+        height: 80vw;
+    }
+    .pop_up_close {
+        font-size: 2.5vw;
+    }
+    li {
+        font-size: 2.5vw;
+    }
+    /***********************************************/
+    .form-signin input, .form-signup input {
+        font-size: 2.2vw;
+    }
+    .form-signin, .form-signup {
+        padding: 5% 5% 0 5%;
+    }
+    /**************Рофлы с переключателем***************/
+    label {
+        font-size: 2.3vw !important;
+        padding: 10% 0 2% 4%;
+    }
+    /**************Новый переключатель***************/
+    [type="checkbox"]:not(:checked) + label:before,
+    [type="checkbox"]:checked + label:before {
+        width: 18%; 
+    }
+    /****************Добавляем шарик*********************/
+    [type="checkbox"]:not(:checked) + label:after,
+    [type="checkbox"]:checked + label:after {
+        width: 1.5vw;
+        height: 1.5vw;
+    }
+    /************ДА ИЛИ НЕТ~(>_<~)*************/
+    [type="checkbox"]:not(:checked) + label .remember_me:before,
+    [type="checkbox"]:checked + label .remember_me:after {
+        font-size: 2.2vw;
+    }
+    /************************************************************/
+    .btn-sign {
+        font-size: 1.8vw;
+    }
+    .forgot a {
+        font-size: 2.2vw;
+    }
+}

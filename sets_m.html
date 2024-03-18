@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+	<link href="https://fonts.cdnfonts.com/css/hallo-sans" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header>
+		<div class='header_firstline'>
+			<a class="firstline_items" href='#'>Помощь и сервис</a>
+			<a class="firstline_items" href='#'>Контакты</a>
+			<a class="firstline_items" href='#'>О нас</a> 
+			<a class="logo push" href='index.html'>
+				<img class="firstline_items" href='#' src="img/logo.png" alt="">
+			</a> 
+			<img class="push firstline_items icons"src="img/icons/sign.png" alt="">
+			<a class="firstline_items open_pop_up" href='#'>Войти</a>
+			<img class="firstline_items icons"src="img/icons/korzina.png" alt="">
+			<a class="firstline_items" href='#'>Корзина</a>
+		</div>
+		
+		<div class="pop_up">
+			<div class="pop_up_container">
+			  <div class="pop_up_body">
+				<div class="nav">
+				  <div class="links">
+					<li class="signin-active" id="signin">
+					  <a class="btn">Войти</a>
+					</li>
+					<li class="signup-inactive" id="signup">
+					  <a class="btn">Зарегестрироваться</a>
+					</li>
+					<div class="pop_up_close" style="color: black;">&#10006</div>
+				  </div>
+				  <div class="cont">
+					<form class="form-signin" id="signinForm" action="">
+					  
+						<label for="username">Логин</label>
+						<input class="pop_up-input" type="text" name="username" placeholder="" required>
+
+						<label for="password">Пароль</label>
+
+						<div class="password">
+							<input class="input-password" type="password" name="password" placeholder="" required>
+							<a href="#" class="password-control"></a>
+						</div>
+
+						<input type="checkbox" id="checkbox"/>
+						<label for="checkbox"><span class="remember_me">Запомнить меня</span></label>
+
+						<button class="btn-sign">Войти</button>
+
+						<div class="forgot">
+							<a href="#">Забыли ваш пароль?</a>
+						</div>
+					</form>
+					<form class="form-signup" id="signupForm" action="">
+
+						<label for="fullname">Логин</label>
+						<input class="pop_up-input" type="text" name="fullname" placeholder="" required>
+				
+						<label for="email">Адрес электронной почты</label>
+						<input class="pop_up-input" type="text" id="email" name="email" placeholder="" required>
+
+
+						<label for="password">Пароль</label>
+						<div class="password">
+							<input class="input-password" id="password" type="password" name="password" minlength="8" placeholder="" required>
+							<a href="#" class="password-control"></a>
+						</div>
+
+						<label for="confirmPassword">Повторите пароль</label>
+						<input class="input-password" type="password" id="confirmPassword" name="confirmPassword" minlength="8" placeholder="" required>
+
+						<button class="btn-sign">Зарегистрироваться</button>
+
+					  </form>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</header>
+	
+	<div class="swiper slider">
+		<div class="swiper-wrapper slider__wrapper">
+			<div class="swiper-slide slider__item">
+				<div class="slider__layer" data-swiper-parallax="50%" style="background-image: url(img/screen-3/layer-back.jpg);"></div>
+				<div class="slider__layer" data-swiper-parallax="40%" style="background-image: url(img/screen-3/layer-middle.png);"></div>
+				<canvas class="particles slider__layer" data-swiper-parallax="25%" data-color="#938086"></canvas>
+				<div class="slider__layer" data-swiper-parallax="30%" style="background-image: url(img/screen-3/layer-ciri.png);"></div>
+				<div class="slider__layer" data-swiper-parallax="16%" style="background-image: url(img/screen-3/layer-front.png);"></div>
+				<div class="set_name" data-swiper-parallax="29%">Набор одежды<br>Ведьмак 999.99 BYN</div>
+			</div>
+
+			<div class="swiper-slide slider__item">
+				<div class="slider__layer" data-swiper-parallax="30%" style="background-image: url(img/screen-2/layer-back.jpg);"></div>
+				<div class="slider__layer" data-swiper-parallax="29%" style="background-image: url(img/screen-2/layer-nix.png);"></div>
+				<div class="slider__layer" data-swiper-parallax="16%" style="background-image: url(img/screen-2/layer-front_2.png);"></div>
+				<div class="set_name" data-swiper-parallax="29%">Летний набор<br>одежды BALZEZG<br>322.99 BYN</div>
+			</div>
+
+			<div class="swiper-slide slider__item">
+				<div class="slider__layer" data-swiper-parallax="45%" style="background-image: url(img/screen-3/layer_back.jpg);"></div>
+				<div class="slider__layer" data-swiper-parallax="35%" style="background-image: url(img/screen-3/layer_middle.png);"></div>
+				<div class="slider__layer" data-swiper-parallax="25%" style="background-image: url(img/screen-3/layer_front2.png);"></div>
+				<div class="set_name" data-swiper-parallax="29%">Стильный набор одежды IMBA ENERGY<br>69.99 BYN</div>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="libs/particles/particles.js"></script>
+	<script src="js/app.js" defer></script>
+</body>
+</html>

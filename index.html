@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Чугун</title>
+        <link rel='stylesheet' href='css/style.css'>
+        <link href="https://fonts.cdnfonts.com/css/hallo-sans" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    </head>
+    <body>
+
+        <header>
+            <div class='header_firstline'>
+                <a class="firstline_items" href='#'>Помощь и сервис</a>
+                <a class="firstline_items" href='#'>Контакты</a>
+                <a class="firstline_items" href='#'>О нас</a> 
+                <a class="logo push" href='index.html'>
+                    <img class="firstline_items" href='#' src="img/logo.png" alt="">
+                </a> 
+                <img class="push firstline_items icons"src="img/icons/sign.png" alt="">
+                <a class="firstline_items open_pop_up" href='#'>Войти</a>
+                <img class="firstline_items icons"src="img/icons/korzina.png" alt="">
+                <a class="firstline_items" href='#'>Корзина</a>
+            </div>
+
+            <div class='header_second_line'>
+                <a class='secondline_item' href='https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley'>Женщинам</a>
+                <a class='secondline_item' href='sets_m.html'>Мужчинам</a>
+                <a class='secondline_item' href='https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley'>Детям</a>
+                <a class='secondline_item' href='https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley'>Кастомная одежда</a>
+                <a class='secondline_item' href='https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley'>Обувь</a>   
+                <a class='secondline_item' href='https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley'>Спорт</a>
+                <a class='secondline_item' href='https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley'>Для дома</a>
+                <a class='secondline_item' href='https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley'>Скидки</a>
+            </div>
+            
+            <div class="pop_up">
+                <div class="pop_up_container">
+                  <div class="pop_up_body">
+                    <div class="nav">
+                      <div class="links">
+                        <li class="signin-active" id="signin">
+                          <a class="btn">Войти</a>
+                        </li>
+                        <li class="signup-inactive" id="signup">
+                          <a class="btn">Зарегестрироваться</a>
+                        </li>
+                        <div class="pop_up_close" style="color: black;">&#10006</div>
+                      </div>
+                      <div class="cont">
+                        <form class="form-signin" id="signinForm" action="">
+                          
+                            <label for="username">Логин</label>
+                            <input class="pop_up-input" type="text" name="username" placeholder="" required>
+
+                            <label for="password">Пароль</label>
+
+                            <div class="password">
+                                <input class="input-password" type="password" name="password" placeholder="" required>
+                                <a href="#" class="password-control"></a>
+                            </div>
+
+                            <input type="checkbox" id="checkbox"/>
+                            <label for="checkbox"><span class="remember_me">Запомнить меня</span></label>
+
+                            <button class="btn-sign">Войти</button>
+
+                            <div class="forgot">
+                                <a href="#">Забыли ваш пароль?</a>
+                            </div>
+                        </form>
+                        <form class="form-signup" id="signupForm" action="">
+
+                            <label for="fullname">Логин</label>
+                            <input class="pop_up-input" type="text" name="fullname" placeholder="" required>
+                    
+                            <label for="email">Адрес электронной почты</label>
+                            <input class="pop_up-input" type="text" id="email" name="email" placeholder="" required>
+
+
+                            <label for="password">Пароль</label>
+                            <div class="password">
+                                <input class="input-password" id="password" type="password" name="password" minlength="8" placeholder="" required>
+                                <a href="#" class="password-control"></a>
+                            </div>
+
+                            <label for="confirmPassword">Повторите пароль</label>
+                            <input class="input-password" type="password" id="confirmPassword" name="confirmPassword" minlength="8" placeholder="" required>
+
+                            <button class="btn-sign">Зарегистрироваться</button>
+
+                          </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          
+            <div class="header-down">
+                <div class="header-title _anim-items _anim-no-hide">
+                    <h>KOVIK<br>SHOP</h>
+
+                    <div class="header-subtitle _anim-items _anim-no-hide">
+                        Лучший магазин одежды и обуви
+                    </div> 
+                </div>
+                <img class='nix-img' src="img/nix.png" alt="">  
+            </div>
+        </header>
+
+        <div class="recomendation"> 
+            <div class='reccomendation-text'>
+                Рекомендуем
+            </div>
+            
+            <div class="recomendation_container">
+                <div class="swiper gallery-swiper">
+                    <div class="swiper-wrapper _anim-items _anim-no-hide">
+                            <div class="swiper-slide">
+                                <div class="anim-show_1">
+                                    <a class="gallery gallery__link" href="g1.html">
+                                        <img class="gallery__img" src="img/goods/1/3.webp" alt="">
+                                        <button class="spec_btn">
+                                            Спортивный костюм NIKE<br>89.99 BYN
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="anim-show_2">
+                                    <a class="gallery gallery__link" href="g2.html">
+                                        <img class="gallery__img" src="img/goods/2/5.webp" alt="">
+                                        <button class="spec_btn">
+                                            Пуловер с принтом в стиле Харадзюк <br>65.99 BYN
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="anim-show_3">
+                                    <a class="gallery gallery__link" href="g5.html">
+                                        <img class="gallery__img" src="img/goods/5/1.webp">
+                                        <button class="spec_btn">
+                                            Кроссовки WARRIOR мужские для бега <br>87,07 BYN
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="anim-show_4">
+                                    <a class="gallery gallery__link" href="g4.html">
+                                        <img class="gallery__img" src="img/goods/4/5.jpg" alt="">
+                                        <button class="spec_btn">
+                                            Толстовки аниме Эрена йера Y2k <br>91,71 BYN
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <a class="gallery gallery__link" href="g3.html">
+                                    <img class="gallery__img" src="img/goods/3/5.jpg" alt="">
+                                    <button class="spec_btn">
+                                        Кроссовки WARRIOR мужские для бега <br>87,08 BYN
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a class="gallery gallery__link" href="img/goods/g3.jpg">
+                                    <img class="gallery__img" src="img/goods/g3.jpg" alt="">
+                                    <button class="spec_btn">
+                                        Толстовка с принтом GANGSTA RAP <br>16,99$
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a class="gallery gallery__link" href="img/goods/g3.jpg">
+                                    <img class="gallery__img" src="img/goods/g3.jpg" alt="">
+                                    <button class="spec_btn">
+                                        Толстовка с принтом GANGSTA RAP <br>16,99$
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a class="gallery gallery__link" href="img/goods/g3.jpg">
+                                    <img class="gallery__img" src="img/goods/g3.jpg" alt="">
+                                    <button class="spec_btn">
+                                        Толстовка с принтом GANGSTA RAP <br>16,99$
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a class="gallery gallery__link" href="img/goods/g3.jpg">
+                                    <img class="gallery__img" src="img/goods/g3.jpg" alt="">
+                                    <button class="spec_btn">
+                                        Толстовка с принтом GANGSTA RAP <br>16,99$
+                                    </button>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+                <div class="btn_container _anim-items _anim-no-hide" style="left: 0.5%;">
+                    <div class="btn-prev">
+                        <div class="btn-prev-top"></div>
+                        <div class="btn-prev-bottom"></div>
+                    </div>
+                </div>
+                <div class="btn_container _anim-items _anim-no-hide" style="right: 0.5%;">
+                    <div class="btn-next">
+                        <div class="btn-next-top"></div>
+                        <div class="btn-next-bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="kastomka">
+            <div class="kastomka-titel">
+                Кастомизированная одежда
+            </div>
+            
+            <div class="kastomka-block">
+                <img class="kastomka-img" src="img/forkastomki.png">
+                <div class="kastomka-inf-container _anim-items _anim-no-hide">
+                    <div class="kastomka-text1 show_text_1">
+                        Одежда в единственном экземпляре<br>
+                        Создаем одежду с вашим дизайном
+                    </div>
+                    <div class="kastomka-text2  show_text_2">
+                        Купить готовую - смотри «В наличии»
+                    </div>
+                    <div class='btn1  show_button'>
+                        <a class="button" href="kastomka.html">В наличии</a> 
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+        <div class="howtoorder">
+            <div class="howtoorder-container">
+                <div class="cont-1">
+                    <img class="howtoorder-img" src="img/drevniirus.png" alt="">
+
+                    <div class="howtoorder-titel">
+                        Как заказать кастомную одежду
+                    </div>
+                    
+                    <div class="howtoorder-text">
+                        Оставьте заявку, мы перезвоним и обсудим детали
+                    </div>
+                </div>
+
+                <div class="cont-2 _anim-items _anim-no-hide">
+
+                    <div class="input-container" style="margin-top: 15%;">
+                        <input class="input" type="text" placeholder=" "/>
+                        <label class="placeholder">Имя</label>
+                    </div>
+
+                    <div class="input-container">
+                        <input class="input" type="text" placeholder=" "/>
+                        <label class="placeholder v2">Телефон</label>
+                    </div>
+                    
+                    <div class='btn2'>
+                        <a class='button' id="open-snackbar" herf='#'>Отправить</a> 
+                    </div>
+                </div>
+                
+                <div id="snackbar">
+                    <div class="notif_title">Заявка отправленна!</div>
+                    В течении 30 минут наш мэнеджер<br>свяжиться с вами!
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="reviews">
+            <div class="reviews-titel _anim-items _anim-no-hide">
+                Отзывы
+            </div>
+            
+            <div class="reviews_container _anim-items _anim-no-hide">
+                <div class="swiper reviews_swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="reviews-block">
+                                <div class="user-inf">
+                                    <img class="user-img" src="img/reviews/olegha.png" alt="">            
+                                    <div class='username'>
+                                        Олег Бубнов
+                                    </div> 
+                                </div> 
+                                <div class='reviews-text'>
+                                    Я хочу поделиться своим восторгом от толстовки, которую я приобрел в этом мазине! Эта толстовка просто превзошла все мои ожидания! Качество материала на самом высоком уровне. Ткань очень мягкая и приятная к телу, а также достаточно плотная, что делает эту толстовку идеальной для прохладных вечеров и зимнего периода. К тому же, она отлично сохраняет свою форму и цвет даже после многократных стирок. Доставили на 2-й день
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="swiper-slide">
+                            <div class="reviews-block">
+                                <div class="user-inf">
+                                    <img class="user-img" src="img/reviews/papas0mple.png" alt="">            
+                                    <div class='username'>
+                                        Александр Костылев
+                                    </div> 
+                                </div>
+                                <div class='reviews-text'>
+                                    Это сайт просто имба! Я был очень впечатлен качеством обуви и обслуживанием, которые я получил.
+                                    Первое, что меня поразило, это широкий ассортимент кроссовок, представленных на сайте.
+                                    Я нашел именно то, что искал, и даже больше. Каждая модель была описана подробно, с указанием всех особенностей
+                                    и характеристик, что помогло мне сделать правильный выбор. 
+                                    В целом, я очень доволен своей покупкой на KOVIKSHOP. 
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="swiper-slide">
+                            <div class="reviews-block">
+                                <div class="user-inf">
+                                    <img class="user-img" src="img/reviews/marci.png" alt="">        
+                                    <div class='username'>
+                                        Яна Мефе
+                                    </div>
+                                </div>
+                                <div class='reviews-text'>            
+                                    Кастомизированная джинсовая куртка от KOVIKSHOP - это не просто одежда, это произведение искусства, которое отражает мою личность и стиль. 
+                                    Это было невероятное приобретение, которое добавило стиль и индивидуальность в мой гардероб.
+                                    Прежде всего, я хотела бы отметить качество куртки. Материалы, использованные для ее создания, 
+                                    высочайшего качества, и она ощущается очень прочной и долговечной. Кроме того, детали кастомизации выполнены 
+                                    с большим мастерством и вниманием к деталям. *Веселый свист* 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-pagination"></div>
+                    <button class="arrow swiper-btn-prev _anim-items _anim-no-hide left"></button>
+                    <button class="arrow swiper-btn-next _anim-items _anim-no-hide right"></button>
+                </div>
+            </div>
+            
+            <footer>
+                <div class="grid-container">
+
+                    <div style="display: block;">
+                        <div class="titel-of-items">
+                            Помощь и сервис<div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text-of-textblock">Как офоримть заказ<br></div>
+                            <div class="text-of-textblock">Оплата<br></div>
+                            <div class="text-of-textblock">Возврат<br></div>
+                            <div class="text-of-textblock">Центр обслуживания клиентов<br></div>
+                            <div class="text-of-textblock">Таблица размеров</div>
+                        </div>
+                    </div>
+
+                    <div style="display: block;">
+                        <div class="titel-of-items">
+                            О магазине<div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text-of-textblock">О нас<br></div>
+                            <div class="text-of-textblock">Контакты<br></div>
+                            <div class="text-of-textblock">Отзывы<br></div>
+                        </div>
+                    </div>
+
+                    <div style="display: block;">
+                        <div class="titel-of-items">
+                            На kovikshop.com<div class="line"></div>
+                        </div>
+                        <div class="item">
+                            <div class="text-of-textblock open_pop_up">Вход<br></div>
+                            <div class="text-of-textblock">Регистрация<br></div>
+                            <div class="text-of-textblock">Мои заказы</div>
+                        </div>
+                    </div>
+
+                    <div style="display: block;">
+                        <div class="titel-of-items">
+                            Способы оплаты<div class="line"></div>
+                        </div>
+                        <div class="item" style="cursor: default;">
+                            Вы можете оплатить покупки<br>наличными при получении,<br>либо выбрать другой способ оплаты:<br>
+                            <img class="cards_icons" src="img/icons/visa.png" alt=""></a>
+                            <img class="cards_icons" src="img/icons/masetcart.png" alt=""></a>
+                        </div>
+                    </div>
+
+                    <div style="display: block;">
+                        <div class="titel-of-items">
+                            Присоединяйтесь<div class="line"></div>
+                        </div>
+                        <div class="item last_item">
+                            <a href="https://vk.com/team_spirit"><img class="media_icons" src="img/icons/vk.png" alt=""></a>
+                            <a href="https://t.me/witchblvdes"><img class="media_icons" src="img/icons/telegram.png" alt=""></a>
+                            <a href="https://www.twitch.tv/rostislav_999"><img class="media_icons" src="img/icons/twitch.png" alt=""></a>
+                            <a href="https://www.instagram.com/straybest/"><img class="media_icons" src="img/icons/insta.png" alt=""></a>
+                            <br>Телефон поддержки:<br>
+                            <div class="text-of-textblock">+375 (44) 464 07 06<br></div>
+                            Электронная почта:<br>
+                            <div class="text-of-textblock">d.s.saulidi@students.psu.by<br></div>
+                            Время работы:<br>
+                            До потери пульса
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <script src="js/notification.js"></script>
+        <script src="js/script.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
